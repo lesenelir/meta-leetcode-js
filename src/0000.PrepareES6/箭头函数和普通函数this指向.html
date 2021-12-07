@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <style>
+      #wrap {
+        width: 100%;
+      }
+
+      #the-button {
+        display: block;
+        margin: 50% auto;
+      }
+
+      .bigger {
+        padding: 20px;
+        transition: padding 1s;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="wrap">
+      <button id="the-button">click me</button>
+    </div>
+
+    <script>
+      <!--  普通函数会重新绑定this值，箭头函数不会重新绑定this值    -->
+      // console.log(this)
+      const selector = document.querySelector('#the-button')
+      selector.addEventListener('click', function () {   // 需要改变this值，所以需要用普通函数
+        console.log(this)
+        this.classList.add("bigger")
+        setTimeout(() => {      // 不需要改变this值，需要用箭头函数
+          this.innerHTML = "clicked"
+        }, 1000)
+      })
+    </script>
+
+  </body>
+</html>
