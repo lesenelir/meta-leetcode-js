@@ -52,7 +52,7 @@ numberSet.delete(2)
 console.log(numberSet.has(1))  // true
 console.log(numberSet.size)
 
-numberSet.forEach((number) => {
+numberSet.forEach((number) => {     // 数组.forEach 遍历某个数组
   console.log(number)
 })
 
@@ -110,7 +110,7 @@ function sortNumbers(...nums) {
     // return nums.sort(function (a, b) {
     //   return a - b
     // })
-    return nums.sort((a, b) => a - b)    // JS中要对
+    return nums.sort((a, b) => a - b)    // JS中要对sort进行重写【a-b 升序】
   }
 }
 console.log(sortNumbers(1, 2, 10, 7, 3))
@@ -124,7 +124,7 @@ console.log(result7)
 // 8. 字符串方法
 const string = "abcd"
 const substring = "ab"
-console.log(string.includes(substring))
+console.log(string.includes(substring))   // 数组也有includes方法
 console.log(string.startsWith("a"))
 console.log(string.startsWith("bc", 1))
 
