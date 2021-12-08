@@ -2,7 +2,7 @@
 
   ### JavaScript solutions for Personal Leetcode problems
 
----
+***
 
   ### Leetcode Problem Label
 
@@ -27,7 +27,7 @@
     - Greedy
     - Dynamic programming
 
----
+***
 
 ### Leetcode Problems
 
