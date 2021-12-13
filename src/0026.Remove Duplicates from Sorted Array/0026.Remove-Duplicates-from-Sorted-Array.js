@@ -20,7 +20,6 @@
 // };
 // console.log(removeDuplicates([1,1,2]))
 
-
 // 双指针解法、快慢指针
 // 慢指针用来保存可放置位置下标、快指针用来扫描遍历数组；
 var removeDuplicates = function(nums) {
