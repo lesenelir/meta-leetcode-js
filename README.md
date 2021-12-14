@@ -33,4 +33,5 @@
 
   - 0000 Prepare for JS Leetcode
   - 0001 two-sum.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Hash Table)
-  - 0026 Remove-Duplicates-from-Sorted-Array.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Two Pointers)
+  - 0026 Remove-Duplicates-from-Sorted-Array.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Two Pointers -- fast & slow Pointers)
+  - 0080 Remove-Duplicates-from-Sorted-Array-II.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Two Pointers -- fast & slow Pointers)
