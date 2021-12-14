@@ -26,7 +26,7 @@ var removeDuplicates = function(nums) {
   if (nums.length === 0) return 0
   let slow = 1
   for (let fast = slow; fast < nums.length; fast++) {
-    if (nums[fast] !== nums[fast - 1]) {
+    if (nums[fast] !== nums[slow - 1]) {
       nums[slow] = nums[fast]
       slow++
     }
@@ -34,3 +34,4 @@ var removeDuplicates = function(nums) {
   return slow
 };
 console.log(removeDuplicates([1,1,2]))
+
