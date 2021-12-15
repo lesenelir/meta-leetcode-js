@@ -25,7 +25,7 @@ var search = function (nums, target) {
   // 跳出循环此时left = right = mid， left保存最小值下标
   // split = nums[left]   // 找到分界点值
   if (target > nums[0]) {  // 在数组左侧进行查找
-    if (left !== 0) {
+    if (left !== 0) {   // 若数组原本就有序，有可能出现left指向下标为0的数据元素
       return BinarySearch(0, left - 1, nums, target)
     } else {
       return BinarySearch(0, nums.length - 1, nums, target)
