@@ -42,6 +42,10 @@
     - 0033
     - 0035
     - 0081
+    - 0004
+
+- Merge Sort
+    - 0004
 
 ***
 
@@ -51,6 +55,7 @@
 - 0001 two-sum.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Hash Table)
 - 0026 Remove-Duplicates-from-Sorted-Array.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Two Pointers -- Fast & Slow Pointers)
 - 0080 Remove-Duplicates-from-Sorted-Array-II.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Two Pointers -- Fast & Slow Pointers)
-- 0035 Search-Insert-Position.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary search)
-- 0033 Search-in-Rotated-Sorted-Array.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary search)
-- 0081 Search-in-Rotated-Sorted-Array-II.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary search)
+- 0035 Search-Insert-Position.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Search)
+- 0033 Search-in-Rotated-Sorted-Array.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Search)
+- 0081 Search-in-Rotated-Sorted-Array-II.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Search)
+- 0004 Median-of-Two-Sorted-Arrays.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary search - Merge Sort)
