@@ -45,6 +45,9 @@
   - 0081
   - 0004
 
+- Search Number
+  - CI04 (Two Dimension Array)
+
 - Merge Sort
   - 0004
 
@@ -61,3 +64,4 @@
 - 0081 Search-in-Rotated-Sorted-Array-II.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Search)
 - 0004 Median-of-Two-Sorted-Arrays.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary search - Merge Sort)
 - Code Interviews 03 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Hash Table)
+- Code Interviews 04 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Two Dimension Array -- Search Number)
