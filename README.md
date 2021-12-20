@@ -32,20 +32,27 @@
 ### Leetcode Problems Label
 
 - Hash Table
-    - 0001
+  - 0001
 
 - Two Pointers - Fast & Slow Pointers
-    - 0026
-    - 0080
+  - 0026
+  - 0080
 
 - Binary Search
-    - 0033
-    - 0035
-    - 0081
-    - 0004
+  - 0033
+  - 0035
+  - 0081
+  - 0004
 
 - Merge Sort
-    - 0004
+  - 0004
+
+***
+
+###  Coding Interviews problems
+
+- Code Interviews 03-[数组中重复的数字](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/)
+
 
 ***
 
