@@ -33,6 +33,7 @@
 
 - Hash Table
   - 0001
+  - CI03
 
 - Two Pointers - Fast & Slow Pointers
   - 0026
@@ -49,14 +50,7 @@
 
 ***
 
-###  Coding Interviews problems
-
-- Code Interviews 03-[数组中重复的数字](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/)
-
-
-***
-
-### Leetcode Personal AC Order
+### Leetcode Personal AC Order & Coding Interviews AC Order
 
 - 0000 Prepare for JS Leetcode
 - 0001 two-sum.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Hash Table)
@@ -66,3 +60,4 @@
 - 0033 Search-in-Rotated-Sorted-Array.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Search)
 - 0081 Search-in-Rotated-Sorted-Array-II.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Search)
 - 0004 Median-of-Two-Sorted-Arrays.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary search - Merge Sort)
+- Code Interviews 03 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Hash Table)
