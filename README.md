@@ -51,6 +51,9 @@
 - Merge Sort
   - 0004
 
+- String
+  - CI05
+
 ***
 
 ### Leetcode Personal AC Order & Coding Interviews AC Order
@@ -65,3 +68,4 @@
 - 0004 Median-of-Two-Sorted-Arrays.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary search - Merge Sort)
 - Code Interviews 03 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Hash Table)
 - Code Interviews 04 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Two Dimension Array -- Search Number)
+- Code Interviews 05 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (String)
