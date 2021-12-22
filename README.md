@@ -54,6 +54,9 @@
 - String
   - CI05
 
+- Linked List
+  - CI06
+
 ***
 
 ### Leetcode Personal AC Order & Coding Interviews AC Order
@@ -69,3 +72,4 @@
 - Code Interviews 03 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Hash Table)
 - Code Interviews 04 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Two Dimension Array -- Search Number)
 - Code Interviews 05 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (String)
+- Code Interviews 06 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Linked List)
