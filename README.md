@@ -60,6 +60,9 @@
 - Binary Tree
   - CI07
 
+- Stack
+  - CI09
+
 ***
 
 ### Leetcode Personal AC Order & Coding Interviews AC Order
@@ -77,3 +80,4 @@
 - Code Interviews 05 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (String)
 - Code Interviews 06 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Linked List)
 - Code Interviews 07 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Tree)
+- Code Interviews 09 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Stack)
