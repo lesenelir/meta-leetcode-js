@@ -2,6 +2,11 @@
 
   ### JavaScript solutions for Personal Leetcode problems
 
+  The contents of this repositories including:
+    - Learning JavaScript Data Stucture & Algorithm Book
+    - Coding Interviews Book
+    - Personal Leetcode problems
+
 ***
 
   ### Data Structure & Algorithm Classification
