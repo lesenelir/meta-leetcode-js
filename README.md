@@ -57,6 +57,9 @@
 - Linked List
   - CI06
 
+- Binary Tree
+  - CI07
+
 ***
 
 ### Leetcode Personal AC Order & Coding Interviews AC Order
@@ -73,3 +76,4 @@
 - Code Interviews 04 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Two Dimension Array -- Search Number)
 - Code Interviews 05 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (String)
 - Code Interviews 06 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Linked List)
+- Code Interviews 07 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Tree)
