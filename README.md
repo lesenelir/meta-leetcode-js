@@ -16,14 +16,14 @@
 
   - Data Structure
     - Array
-    - Linked list
-    - Doubly linked list
+    - Linked List
+    - Doubly Linked list
     - Queue
     - Stack
     - Hash table
     - Heap - Max Heap & Min Heap
-    - Priority queue
-    - Dictionary tree
+    - Priority Queue
+    - Dictionary Tree
     - Tree
     - Graph
 
@@ -33,7 +33,7 @@
     - Math
     - String
     - Greedy
-    - Dynamic programming
+    - Dynamic Programming
 
 ***
 
@@ -71,6 +71,9 @@
 - Stack
   - CI09
 
+- Dynamic Programming
+  - CI10
+
 ***
 
 ### Leetcode Personal AC Order & Coding Interviews AC Order
@@ -89,3 +92,4 @@
 - Code Interviews 06 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Linked List)
 - Code Interviews 07 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Tree)
 - Code Interviews 09 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Stack)
+- Code Interviews 10 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Dynamic Programming)
