@@ -52,6 +52,7 @@
   - 0035
   - 0081
   - 0004
+  - CI11
 
 - Search Number
   - CI04 (Two Dimension Array)
@@ -95,3 +96,4 @@
 - Code Interviews 09 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Stack)
 - Code Interviews 10 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Dynamic Programming)
 - Code Interviews 10-II &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Dynamic Programming)
+- Code Interviews 11 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Search)
