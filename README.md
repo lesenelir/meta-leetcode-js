@@ -32,9 +32,10 @@
     - Search
     - Math
     - String
-    - Greedy
+    - Greedy Algorithm
     - Dynamic Programming (DP)
     - Depth-First-Search （DFS）
+    - Breadth First Search (BFS)
 
 ***
 
@@ -76,9 +77,16 @@
 - Dynamic Programming (DP)
   - CI10
   - CI10-II
+  - CI14
+
+- Greedy Algorithm
+  - CI14-II
 
 - Depth-First-Search (DFS)
-  -  CI12
+  - CI12
+
+- Breadth First Search (BFS)
+  - CI13
 
 ***
 
@@ -102,3 +110,4 @@
 - Code Interviews 10-II &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Dynamic Programming)
 - Code Interviews 11 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Search)
 - Code Interviews 12 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Depth-First-Search)
+- Code Interviews 13 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Depth-First-Search)
