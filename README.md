@@ -59,6 +59,9 @@
 - Search Number
   - CI04 (Two Dimension Array)
 
+- Math
+  - CI15
+
 - Merge Sort
   - 0004
 
@@ -111,3 +114,9 @@
 - Code Interviews 11 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Search)
 - Code Interviews 12 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Depth-First-Search)
 - Code Interviews 13 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Depth-First-Search)
+- Code Interviews 14 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Dynamic Programming)
+- Code Interviews 14-II &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Greedy Algorithm)
+- Code Interviews 15 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Math)
+
+
+
