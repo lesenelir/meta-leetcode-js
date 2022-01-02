@@ -33,6 +33,7 @@
     - Math
     - String
     - Greedy Algorithm
+    - Recursion
     - Dynamic Programming (DP)
     - Depth-First-Search （DFS）
     - Breadth First Search (BFS)
@@ -77,6 +78,9 @@
 - Stack
   - CI09
 
+- Recursion
+  - CI16
+
 - Dynamic Programming (DP)
   - CI10
   - CI10-II
@@ -117,6 +121,5 @@
 - Code Interviews 14 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Dynamic Programming)
 - Code Interviews 14-II &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Greedy Algorithm)
 - Code Interviews 15 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Math)
-
-
+- Code Interviews 16 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Recursion)
 
