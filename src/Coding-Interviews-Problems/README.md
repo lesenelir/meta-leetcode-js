@@ -14,3 +14,6 @@
 - Code Interviews 14-[剪绳子](https://leetcode-cn.com/problems/jian-sheng-zi-lcof/)
 - Code Interviews 14-II-[剪绳子](https://leetcode-cn.com/problems/jian-sheng-zi-ii-lcof/)
 - Code Interviews 15-[二进制中1的个数](https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/)
+- Code Interviews 16-[数值的整数次方](https://leetcode-cn.com/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/)
+- Code Interviews 17-[打印从1到最大的n位数](https://leetcode-cn.com/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/)
+
