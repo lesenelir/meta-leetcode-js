@@ -17,4 +17,7 @@
 - Code Interviews 16-[数值的整数次方](https://leetcode-cn.com/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/)
 - Code Interviews 17-[打印从1到最大的n位数](https://leetcode-cn.com/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/)
 - Code Interviews 18-[删除链表的结点](https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/)
+- Code Interviews 19-[正则表达式匹配]
+- Code Interviews 20-[表示数值的字符串]
+- Code Interviews 21-[调整数组顺序使奇数位于偶数前面](https://leetcode-cn.com/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/)
 

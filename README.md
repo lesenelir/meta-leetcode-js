@@ -49,6 +49,10 @@
 - Two Pointers - Fast & Slow Pointers
   - 0026
   - 0080
+  - CI21
+
+- Two Pointers - Begin & End Pointers
+  - CI21
 
 - Binary Search
   - 0033
@@ -62,6 +66,7 @@
 
 - Math
   - CI15
+  - CI17
 
 - Merge Sort
   - 0004
@@ -71,6 +76,7 @@
 
 - Linked List
   - CI06
+  - CI18
 
 - Binary Tree
   - CI07
@@ -122,4 +128,9 @@
 - Code Interviews 14-II &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Greedy Algorithm)
 - Code Interviews 15 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Math)
 - Code Interviews 16 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Recursion)
+- Code Interviews 17 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Math)
+- Code Interviews 18 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Linked List)
+
+
+- Code Interviews 21 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Two Pointers)
 
