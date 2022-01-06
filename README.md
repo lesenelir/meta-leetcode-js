@@ -50,6 +50,7 @@
   - 0026
   - 0080
   - CI21
+  - CI22
 
 - Two Pointers - Begin & End Pointers
   - CI21
@@ -77,6 +78,7 @@
 - Linked List
   - CI06
   - CI18
+  - CI22
 
 - Binary Tree
   - CI07
@@ -133,4 +135,5 @@
 
 
 - Code Interviews 21 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Two Pointers)
+- Code Interviews 22 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Linked List & Two Pointers)
 
