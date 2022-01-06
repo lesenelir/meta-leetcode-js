@@ -80,6 +80,7 @@
   - CI18
   - CI22
   - CI24
+  - CI25
 
 - Binary Tree
   - CI07
@@ -90,6 +91,7 @@
 - Recursion
   - CI16
   - CI24
+  - CI25
 
 - Dynamic Programming (DP)
   - CI10
@@ -139,4 +141,5 @@
 - Code Interviews 21 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Two Pointers)
 - Code Interviews 22 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Linked List & Two Pointers)
 - Code Interviews 24 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Linked List & Recursion)
+- Code Interviews 25 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Linked List & Recursion)
 
