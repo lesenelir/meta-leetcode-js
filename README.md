@@ -85,6 +85,7 @@
 - Binary Tree
   - CI07
   - CI26
+  - CI27
 
 - Stack
   - CI09
@@ -94,6 +95,7 @@
   - CI24
   - CI25
   - CI26
+  - CI27
 
 - Dynamic Programming (DP)
   - CI10
@@ -145,4 +147,5 @@
 - Code Interviews 24 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Linked List & Recursion)
 - Code Interviews 25 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Linked List & Recursion)
 - Code Interviews 26 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Tree & Recursion)
+- Code Interviews 27 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Tree & Recursion)
 
