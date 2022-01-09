@@ -32,6 +32,7 @@
     - Search
     - Math
     - String
+    - Simulation
     - Greedy Algorithm
     - Recursion
     - Dynamic Programming (DP)
@@ -113,6 +114,10 @@
 - Breadth First Search (BFS)
   - CI13
 
+- Simulation
+  - CI29
+
+
 ***
 
 ### Leetcode Personal AC Order & Coding Interviews AC Order
@@ -151,4 +156,4 @@
 - Code Interviews 26 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Tree & Recursion)
 - Code Interviews 27 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Tree & Recursion)
 - Code Interviews 28 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Tree & Recursion)
-
+- Code Interviews 29 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Simulation)
