@@ -27,7 +27,7 @@
 
     <script>
       <!--  普通函数会重新绑定this值，箭头函数不会重新绑定this值    -->
-      // console.log(this)
+      console.log(this)
       const selector = document.querySelector('#the-button')
       selector.addEventListener('click', function () {   // 需要改变this值，所以需要用普通函数
         console.log(this)
