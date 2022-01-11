@@ -26,5 +26,10 @@
 - Code Interviews 26-[树的子结构](https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/)
 - Code Interviews 27-[二叉树的镜像](https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/)
 - Code Interviews 28-[对称的二叉树](https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/)
-- Code Interviews 28-[顺时针打印矩阵](https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/)
-- Code Interviews 29-[包含min函数的栈](https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/submissions/)
+- Code Interviews 29-[顺时针打印矩阵](https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/)
+- Code Interviews 30-[包含min函数的栈](https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/submissions/)
+- Code Interviews 31-[栈的压入、弹出序列](https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/)
+
+
+
+

@@ -92,6 +92,7 @@
 - Stack
   - CI09
   - CI30
+  - CI31
 
 - Recursion
   - CI16
@@ -159,3 +160,4 @@
 - Code Interviews 28 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Binary Tree & Recursion)
 - Code Interviews 29 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Simulation)
 - Code Interviews 30 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Stack)
+- Code Interviews 31 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Stack)
