@@ -52,6 +52,7 @@
   - 0080
   - CI21
   - CI22
+  - CI39
 
 - Two Pointers - Begin & End Pointers
   - CI21
@@ -161,3 +162,9 @@
 - Code Interviews 29 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Simulation)
 - Code Interviews 30 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Stack)
 - Code Interviews 31 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Stack)
+
+
+- Code Interviews 39 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Array & Two Pointers)
+
+
+
