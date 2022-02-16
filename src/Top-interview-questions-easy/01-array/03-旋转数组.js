@@ -32,7 +32,7 @@ var rotate = function (nums, k) {
   reverseArray(nums, 0, k - 1)
   reverseArray(nums, k, nums.length - 1)
 
-  function reverseArray(nums, start, end) {
+  function reverseArray(nums, start, end) { // 关于指定数组下标翻转数组元素函数
     while (start < end) {
       let temp = nums[start]
       // nums[start] = nums[end]
