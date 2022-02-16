@@ -18,6 +18,5 @@ var removeDuplicates = function(nums) {
       slow++
     }
   }
-
   return slow
 };
