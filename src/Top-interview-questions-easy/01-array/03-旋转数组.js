@@ -4,7 +4,7 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 
-// 方法1 添加临时数组
+// 方法1： 添加临时数组
 var rotate1 = function (nums, k) {
 
   k = k % nums.length
@@ -24,8 +24,9 @@ var rotate1 = function (nums, k) {
 
 // console.log(rotate1([1,2,3,4,5,6,7],7))
 
-var rotate = function (nums, k) {
 
+// 方法2： 通过三次反转数组旋转数组
+var rotate = function (nums, k) {
   k = k % (nums.length)
 
   reverseArray(nums, 0, nums.length - 1)
