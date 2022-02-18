@@ -1,8 +1,9 @@
 {
-  "name": "meta-leetcodejs",
+  "name": "meta-leetcode-js",
   "version": "1.0.0",
   "description": "- - 0001 two-sum.js",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
