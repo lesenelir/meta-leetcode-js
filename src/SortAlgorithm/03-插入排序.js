@@ -22,6 +22,5 @@ console.log(insertSort(arr))
 /**
  *  总结：
  *    1. 插入排序需要知道前一个元素的下标preIndex,最终该变量preIndex指向要插入元素的前一个元素
- *    2.
- *
+ *    2. 插入排序是一种稳定算法
  */
