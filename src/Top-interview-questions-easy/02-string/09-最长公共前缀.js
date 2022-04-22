@@ -20,5 +20,5 @@ var longestCommonPrefix = function (strs) {
   return pre
 };
 
-// Note: A.indeof("B") 字符串B在字符串A中第一次出现的位置
+// Note: A.indexOf("B") 字符串B在字符串A中第一次出现的位置
 console.log(("Hello World").indexOf("llo"))
