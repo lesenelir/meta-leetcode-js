@@ -28,3 +28,6 @@ var removeNthFromEnd = function (head, n) {
 
   return node.next
 };
+
+// Note： 知识点：关于一次遍历就获得链表长度 并进行操作的题
+// 链表题目 多用添加节点的方式来处理，以便忽略头节点特殊处理

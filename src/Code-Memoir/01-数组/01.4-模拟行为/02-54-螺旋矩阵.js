@@ -28,7 +28,7 @@ var spiralOrder = function(matrix) {
     }
     bottom--
     if (top > bottom) break
-    // 从上到下
+    // 从下到上
     for (let i = bottom; i >= top; i--) {
       res.push(matrix[i][left])
     }

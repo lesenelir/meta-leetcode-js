@@ -28,6 +28,9 @@ var topKFrequent = function(nums, k) {
 
 // Note : 利用数组可以保存对象的方法进行保存
 
+// Note： 此题收获：对于map中的数据，可以通过遍历entries 作为一个对象的key value 传入数组当作item
+
+
 let map = {1: 3, 2: 2, 3: 1}
 console.log(Array.from(map))
 

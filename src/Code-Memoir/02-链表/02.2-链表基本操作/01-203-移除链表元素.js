@@ -15,8 +15,8 @@
 var removeElements = function(head, val) {
   let newList = new ListNode(0, head)
   let current = newList
-  while (current.next === val) {
-    if (current.next.val) {
+  while (current.next) {
+    if (current.next.val === val) {
       current.next = current.next.next
     } else {
       current = current.next
@@ -24,5 +24,4 @@ var removeElements = function(head, val) {
   }
   return newList.next
 };
-
 // Note： 对于需要对头节点单独处理的操作，可以创建一个虚拟节点，最后返回虚拟列表的next
