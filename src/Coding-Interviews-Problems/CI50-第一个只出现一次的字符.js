@@ -13,7 +13,6 @@ var firstUniqChar = function(s) {
       map.set(item, 1)
     }
   }
-
   // 已经存储完map
   for (let [key, value] of map.entries()) {
     if (value === 1) {
