@@ -5,14 +5,21 @@
  */
 var reverseLeftWords = function(s, n) {
   let arr = s.split('')
-  let temp = []
-  for (let i = n; i < arr.length; i++) {
-    temp.push(arr[i])
+  let k = n % s.length
+  reverse(0, k - 1)
+  reverse(k, arr.length - 1)
+  reverse(0, arr.length - 1)
+  // console.log(arr)
+  return arr.join('')
+
+  function reverse (i, j) {
+    let [left, right] = [i, j]
+    while (left < right) { // 相等或大于情况退出循环
+      [arr[left], arr[right]] = [arr[right], arr[left]]
+      left++
+      right--
+    }
   }
-  for (let i = 0; i < n; i++) {
-    temp.push(arr[i])
-  }
-  return temp.join('')
 };
 
-// Note: 对于很多的字符串操作，可以做到局部反转，在做到全局反转
+// 取余操作
