@@ -15,6 +15,7 @@ var findAnagrams = function(s, p) {
   }
 
   for (let i = 0; i < s.length - p.length + 1; i++) {
+    // 创建一个新对象，把hash的所有属性赋给该新对象
     let tempHash = Object.assign({}, hash)
     let flag = true
     for (let j = i; j < i + p.length; j++) {
