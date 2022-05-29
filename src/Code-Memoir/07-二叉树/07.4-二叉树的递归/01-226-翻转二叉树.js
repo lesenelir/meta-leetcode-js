@@ -11,6 +11,7 @@
  * @return {TreeNode}
  */
 var invertTree = function(root) {
+  // 思路：把每个节点的左右孩子都进行翻转，就可以达到整体反转效果
   let queue = []
   if (root) queue.push(root)
 
@@ -19,8 +20,8 @@ var invertTree = function(root) {
 
     for (let i = 0; i < levelCount; i++) {
       let node = queue.shift()
-      if (!node.left && !node.right) continue
-
+      if (!node.left && !node.right) continue // 该节点左右都为空则继续
+      // 更换该节点的左右节点值
       [node.left, node.right] = [node.right, node.left]
 
       if (node.left) queue.push(node.left)
