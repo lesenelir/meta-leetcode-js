@@ -11,25 +11,28 @@
  * @return {number}
  */
 var minDepth = function(root) {
+  // 思路： 获取某一个节点
   return getDepth(root)
 
+  // 获取每一个节点深度的函数
   function getDepth(node) {
+    // 递归终止条件
     if (!node) return 0
+
+    // 单层递归逻辑 - 找该节点最小深度
     let depth = 0
-    let rightDepth = getDepth(node.right)
     let leftDepth = getDepth(node.left)
-    if (!node.left && node.right) {
-      depth = rightDepth
-    }
+    let rightDepth = getDepth(node.right)
     if (node.left && !node.right) {
       depth = leftDepth
     }
+    if (!node.left && node.right) {
+      depth = rightDepth
+    }
     if (node.left && node.right) {
-      depth = Math.min(rightDepth, leftDepth)
+      depth = Math.min(leftDepth, rightDepth)
     }
     return depth + 1
   }
 
 };
-
-// Note: 求二叉树的最大深度和最小深度的递归算法的主要区别：处理左右孩子不为空的逻辑

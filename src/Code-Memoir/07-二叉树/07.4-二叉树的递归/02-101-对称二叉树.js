@@ -43,16 +43,19 @@ var isSymmetric = function(root) {
 
 // 递归方法
 var isSymmetric2 = function(root) {
+  // 思路：比较某节点的左右子树 - 左子树的左子树 要和 右子树的右子树 相等
   if (!root) return true
   return compare(root.left, root.right)
 
+  // 比较的是左右子树，而不是左右子孩子，所以参数要存放左右节点，不能只存放一个节点node
   function compare(left, right) {
     // 终止条件
     if (!left && right) return false
     else if (left && !right) return false
     else if (!left && !right) return true
     else if (left.val !== right.val) return false
-    // 单层循环遍历
+
+    // 单层递归逻辑 - 此时为左右子树都存在，且左右子树数值相等情况
     const outside = compare(left.left, right.right)
     const inside = compare(left.right, right.left)
     return outside && inside
