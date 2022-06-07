@@ -17,11 +17,11 @@ var combine = function (n, k) {
       return
     }
     // 单层搜索过程
-    for (let i = startIndex; i <= n; i++) {
+    for (let i = startIndex; i <= n; i++) { // 控制树的横向遍历
       // 处理节点
-      path.push(i)                 // 分别对应： 取1 之后进行递归 - 取2 之后进行递归 - 取3 之后进行递归
+      path.push(i)
       // 递归
-      backTacking(i + 1)
+      backTacking(i + 1) // 控制树的纵向遍历
       // 回溯，撤销结果
       path.pop()
     }
@@ -30,3 +30,5 @@ var combine = function (n, k) {
 };
 
 console.log(combine(4, 2))
+
+// Note： 对于js而言，父级元素中的变量可以不做当前的递归函数的参数
