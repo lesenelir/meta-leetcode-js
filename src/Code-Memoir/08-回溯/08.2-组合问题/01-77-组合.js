@@ -4,14 +4,15 @@
  * @return {number[][]}
  */
 var combine = function (n, k) {
-
+  // 组合问题是处理叶子节点 所有递归终止条件必须写
   let res = []
   let path = []
   backTacking(1)
   return res
 
+  // 一个集合求组合的话 则需要startIndex
   function backTacking(startIndex) {
-    // 终止条件
+    // 终止条件 - 处理叶子节点
     if (path.length === k) {
       res.push([...path]) // 不能直接push path数组，是引用
       return
