@@ -10,7 +10,7 @@ var partition = function(s) {
   backTracking(0)
   return res
 
-  function backTracking(startIndex) {
+  function backTracking(startIndex) { // 一个元素不能重复利用要startIndex
     // 递归终止条件
     if (startIndex >= s.length) {
       res.push([...path])
