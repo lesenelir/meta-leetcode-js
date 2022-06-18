@@ -12,7 +12,7 @@ var findMinArrowShots = function(points) {
       res = 1
 
   for (let i = 1; i < len; i++) {
-    if (points[i][0] > R) { // 当前气球的左端点大于右边界
+    if (points[i][0] > R) { // 当前气球的左端点大于当前气球右边界，即不重合时，重新定义R并记录
       R = points[i][1]
       res++
     }
