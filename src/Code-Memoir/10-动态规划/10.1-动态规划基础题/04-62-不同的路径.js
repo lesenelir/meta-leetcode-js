@@ -5,6 +5,8 @@
  */
 var uniquePaths = function (m, n) {
   // const dp = new Array(m).fill().map(item => new Array(n))
+  // Note: JS创建二维数组需要在map前添加fill
+
   const dp = []
   for (let i = 0; i < m; i++) {
     dp[i] = new Array(n)
