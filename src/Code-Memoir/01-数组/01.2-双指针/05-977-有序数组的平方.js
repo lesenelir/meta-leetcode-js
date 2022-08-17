@@ -4,20 +4,21 @@
  */
 // 左右双指针：最大值的位置一定是左右两边
 var sortedSquares = function(nums) {
-  let [left, right] = [0, nums.length - 1]
-  let res = []
-  let index = nums.length - 1
-  while (left <= right) { // 相等情况还是要处理
+  // 左右指针： 数组平方的最大位一定在
+  let left = 0,
+      right = nums.length - 1,
+      res = []
+
+  while (left <= right) {
     if (nums[left] * nums[left] > nums[right] * nums[right]) {
-      res[index] = nums[left] * nums[left]
+      res.unshift(nums[left] * nums[left])
       left++
-      index--
     } else {
-      res[index] = nums[right] * nums[right]
+      res.unshift(nums[right] * nums[right])
       right--
-      index--
     }
   }
+
   return res
 };
 

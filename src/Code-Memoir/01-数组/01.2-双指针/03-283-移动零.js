@@ -4,6 +4,7 @@
  */
 // 双指针：slow用作需要更新的元素；fast用于遍历数组
 var moveZeroes = function(nums) {
+  // slow 指向0位置，fast用来遍历数组，
   let slow = 0
   for (let fast = slow; fast < nums.length; fast++) {
     if (nums[slow] !== 0) { // 保证slow永远指向为0的元素
@@ -16,5 +17,4 @@ var moveZeroes = function(nums) {
       slow++
     }
   }
-  return nums
 };

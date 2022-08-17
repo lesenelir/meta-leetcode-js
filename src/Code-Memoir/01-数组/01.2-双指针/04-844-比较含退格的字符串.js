@@ -4,30 +4,30 @@
  * @return {boolean}
  */
 var backspaceCompare = function(s, t) {
-  let newS = finalStr(s)
-  let newT = finalStr(t)
-  if(newS.length !== newT.length) return false
-  // 此时两者的长度相等
-  for (let i = 0; i < newS.length; i++) {
-    if (newS[i] !== newT[i]) {
-      return false
-    }
-  }
-  return true
+  // 利用栈来处理，字母则入栈，#则出栈
+  let newS = getStr(s),
+      newT = getStr(t)
 
-  // 使用栈来创建新的数组，并把数组转成字符串
-  function finalStr(str) {
-    let newArr = []
-    for (let i = 0; i < str.length; i++) {
+  if (newS === newT) {
+    return true
+  } else {
+    return false
+  }
+
+  function getStr(str) {
+    let stack = [],
+        len = str.length
+
+    for (let i = 0; i < len; i++) {
       if (str[i] !== '#') {
-        newArr.push(str[i])
+        stack.push(str[i])
       } else {
-        newArr.pop()
+        stack.pop()
       }
-
     }
-    return newArr.join('')
+    return stack.join('')
   }
+
 };
 
 
@@ -43,5 +43,5 @@ for (const strElement of str) {
 console.log(str.split(''))
 console.log(str.split(' '))
 let arr = ['a', 'b', 'c']
-console.log(arr.join(''))
-
+console.log(arr.join('')) // abc
+console.log(arr.join()) // a,b,c

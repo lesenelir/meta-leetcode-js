@@ -4,7 +4,11 @@
  * @return {number}
  */
 var search = function(nums, target) {
-  let [left, right] = [0, nums.length - 1]
+  // 二分查找
+  // 定义target在数组[left, right]中，所以left === right 是有意义的
+  let left = 0,
+      right = nums.length - 1
+
   while (left <= right) {
     let mid = Math.floor((left + right) / 2)
     if (nums[mid] > target) {
@@ -15,6 +19,5 @@ var search = function(nums, target) {
       return mid
     }
   }
-
   return -1
 };

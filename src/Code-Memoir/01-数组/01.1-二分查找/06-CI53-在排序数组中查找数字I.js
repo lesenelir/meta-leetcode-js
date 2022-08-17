@@ -5,6 +5,7 @@
  */
 var search = function(nums, target) {
   // 思路：查找元素第一次出现的位置；查找元素最后一次出现的位置，两者区间之差是出现的次数
+  // 该题目和34一样
   let flag = false
   let first = findFirstIndex(nums, target)
   let last = findLastIndex(nums, target)
