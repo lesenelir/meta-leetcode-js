@@ -10,17 +10,19 @@
  * @return {ListNode}
  */
 var reverseList = function(head) {
-  let pre = null
-  let cur = head
+  // 双指针操作：pre 、 cur
+  // 关键在于：断链之前保存cur.next这个节点
+  let cur = head,
+      pre = null
 
-  while (cur !== null) {
-    let temp = cur.next // 【易错】：保存cur的后面一个节点，方便后面cur的移动
-    cur.next = pre // 改变指针指向
-    pre = cur // 先移动pre
-    cur = temp // 再移动cur
+  while (cur) {
+    let temp = cur.next
+    cur.next = pre
+    pre = cur
+    cur = temp
   }
 
-  return pre  //
+  return pre
 };
 
 // Note： 反转链表用两个指针来完成

@@ -9,21 +9,25 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var swapPairs = function (head) {
+var swapPairs = function(head) {
+  // 类似于翻转链表：断链之前需要保存节点
+  // 设置虚拟节点：不需要对头节点做特殊处理
   if (!head || !head.next) return head
 
-  let node = new ListNode(0, head)
-  let cur = node
+  let newList = new ListNode(0, head),
+      cur = newList
 
-  while (cur.next && cur.next.next) { // 对于链表的更换，基本上要进行临时节点的保存
-    let temp1 = cur.next
-    let temp2 = cur.next.next
-    cur.next = temp2
-    temp1.next = temp2.next // temp2是第二个节点，要保证temp2.next是原来的
-    temp2.next = temp1
+  while (cur.next && cur.next.next) {
+    let node1 = cur.next,
+        node2 = cur.next.next,
+        temp = node2.next
 
-    cur = cur.next.next
+    cur.next = node2
+    node2.next = node1
+    node1.next = temp
+
+    cur = cur.next.next // cur指向第三个节点
   }
 
-  return node.next
+  return newList.next
 };

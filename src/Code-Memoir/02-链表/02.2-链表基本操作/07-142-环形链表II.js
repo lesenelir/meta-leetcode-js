@@ -12,6 +12,7 @@
  */
 var detectCycle = function(head) {
   if (!head || !head.next) return null
+
   let [fast, slow] = [head, head]
   while (fast && fast.next) {
     slow = slow.next
@@ -26,6 +27,7 @@ var detectCycle = function(head) {
       return slow
     }
   }
+
   return null // 不存在环
 };
 
