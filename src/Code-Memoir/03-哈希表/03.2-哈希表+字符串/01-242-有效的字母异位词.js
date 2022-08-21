@@ -4,35 +4,32 @@
  * @return {boolean}
  */
 var isAnagram = function(s, t) {
+  // map 存储字符出现的次数
+  let mapS = getStrMap(s),
+      mapT = getStrMap(t)
 
-  let mapS = new Map()
-  let mapT = new Map()
+  if (mapS.size !== mapT.size) return false // 提前判断map中有多少个键值对
 
-  for (const key in s) {
-    if (mapS.has(s[key])) {
-      mapS.set(s[key], mapS.get(s[key]) + 1)
-    } else {
-      mapS.set(s[key], 1)
-    }
-  }
-
-  for (const key in t) {
-    if (mapT.has(t[key])) {
-      mapT.set(t[key], mapT.get(t[key]) + 1)
-    } else {
-      mapT.set(t[key], 1)
-    }
-  }
-
-  if (mapS.size !== mapT.size) {
-    return false
-  }
-
-  for (const [key, value] of mapS) {
+  for (let [key, value] of mapS.entries()) {
     if (mapT.get(key) !== value) {
       return false
     }
   }
 
   return true
+
+  function getStrMap(str) {
+    let len = str.length,
+        map = new Map()
+
+    for (let i = 0; i < len; i++) {
+      if (!map.has(str[i])) {
+        map.set(str[i], 1)
+      } else {
+        map.set(str[i], map.get(str[i]) + 1)
+      }
+    }
+
+    return map
+  }
 };

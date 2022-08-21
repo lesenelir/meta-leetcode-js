@@ -15,7 +15,7 @@ function getStr(str) {
     map.set(item, map.get(item) + 1)
   }
 
-  console.log(map)
+  console.log(map.entries()) // map.entries() 是一个对象，里面保存数组元素
   let arr = [...map.entries()].sort((a, b) => b[1] - a[1])
 
   for (let i = 0; i < 5; i++) {

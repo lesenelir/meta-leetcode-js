@@ -4,20 +4,28 @@
  */
 var groupAnagrams = function(strs) {
   // map的key是异位词；值是一个数组，里面存放所有的值
-  let map = new Map()
+  let map = new Map(),
+      len = strs.length,
+      str,
+      key
 
-  for (const str of strs) {
-    let strKey = str.split('').sort().join('')     // 当且仅当 字符串排序相等，则是异位词
-    if (map.has(strKey)) {
-      let temp = map.get(strKey) // temp 是数组
+  for (let i = 0; i < len; i++) {
+    str = strs[i]
+    key = str.split('').sort().join('') // 排序后字符串
+    if (map.has(key)) {
+      let temp = map.get(key)
       temp.push(str)
-      map.set(strKey, temp)
+      map.set(key, temp)
     } else {
-      map.set(strKey, [str])
+      map.set(key, [str]) // value保存数组
     }
   }
-  return Array.from(map.values())
+
+  return [...map.values()]
 };
 
-// let str = 'anb'
-// console.log(str.split('').sort().join(''))
+let str = 'anb'
+console.log(str.split('').sort().join(''))
+
+// Note: 异位词可以考虑：map + 异位词的排序是相同的
+
