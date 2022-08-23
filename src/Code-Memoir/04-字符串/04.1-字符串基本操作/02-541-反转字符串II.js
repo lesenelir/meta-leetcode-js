@@ -18,6 +18,7 @@ var reverseStr = function (s, k) {
 
   return arr.join('')
 };
+// 此题注重：下一次需要循环处理的节点是在哪一个下标
 
 let str = '123adb'
 console.log(str.split('').reverse().join(''))

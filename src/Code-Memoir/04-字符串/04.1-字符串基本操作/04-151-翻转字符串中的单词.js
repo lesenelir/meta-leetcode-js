@@ -2,33 +2,35 @@
  * @param {string} s
  * @return {string}
  */
-var reverseWords = function (s) {
-  let r = s.length - 1, l = r, res = "";
-  while (l >= 0) {
-    //先找到单词的尾部
-    while (s[r] === " ") {
-      r--;
-    }
-    l = r;
+var reverseWords = function(s) {
+  // 从后往前遍历，遇到空格则截断字符串放入新的字符串中
+  let len = s.length,
+      right = len - 1,
+      left = right,
+      res = ''
 
-    //给上次单词加空格，排除第一次
-    if (l >= 0 && res) {
-      res += " ";
-    }
+  while (left >= 0) {
+    if (res) res += ' '
 
-    //再找到单词的头部
-    while (s[l] && s[l] !== " ") {
-      l--;
+    // 找单词尾部
+    while (s[right] === ' ') {
+      right--
     }
+    left = right
 
-    //遍历单词并添加
-    for (let i = l + 1; i <= r; i++) {
-      res += s[i];
+    // 找单词头部，跳出循环时，left 指向 ' '
+    while (s[left] && s[left] !== ' ') {
+      left--
     }
 
-    //跳到下一个单词
-    r = l;
+    // 有了单词头部和单词尾部，遍历输出元素
+    for (let i = left + 1; i <= right; i++) {
+      res += s[i]
+    }
+
+    // right跳转至left位置，此时right指向为0，等待遍历修改下一个单词
+    right = left
   }
 
-  return res;
+  return res.trim()
 };

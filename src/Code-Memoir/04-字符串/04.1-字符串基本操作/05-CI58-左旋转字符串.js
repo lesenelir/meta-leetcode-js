@@ -4,21 +4,24 @@
  * @return {string}
  */
 var reverseLeftWords = function(s, n) {
-  let arr = s.split('')
-  let k = n % s.length
-  reverse(0, k - 1)
-  reverse(k, arr.length - 1)
-  reverse(0, arr.length - 1)
-  // console.log(arr)
+  // 此题要取余操作，防止k大于s的长度
+  let arr = s.split(''),
+      len = arr.length,
+      k = n % len
+
+  reverse(arr, 0, k - 1)
+  reverse(arr, k, len - 1)
+  reverse(arr, 0, len - 1)
+
   return arr.join('')
 
-  function reverse (i, j) {
-    let [left, right] = [i, j]
-    while (left < right) { // 相等或大于情况退出循环
-      [arr[left], arr[right]] = [arr[right], arr[left]]
+  function reverse(arr, left, right) { // 相等情况退出操作
+    while (left < right) {
+      ;[arr[left], arr[right]] = [arr[right], arr[left]]
       left++
       right--
     }
+    return arr
   }
 };
 
