@@ -12,6 +12,40 @@
  * @return {number[][]}
  */
 var pathSum = function(root, targetSum) {
+  // 二叉树的遍历算法，保存节点
+  let res = [],
+      path = [],
+      sum = 0
+
+  traversal(root)
+  return res
+
+  function traversal(node) {
+    if (!node) return
+
+    if (!node.left && !node.right) {
+      sum += node.val
+      path.push(node.val)
+      if (targetSum === sum) {
+        res.push([...path])
+      }
+      sum -= node.val
+      path.pop()
+    }
+    sum += node.val // 前序位置
+    path.push(node.val)
+    traversal(node.left)
+    traversal(node.right)
+    sum -= node.val // 后序位置
+    path.pop()
+  }
+
+};
+
+
+
+
+var pathSum2 = function(root, targetSum) {
   // 思路：遍历递归每一条路径targetSum - 每个节点的val 为 0，则放入数组中
   // 要遍历整棵树所有的路径，所以递归函数不需要有返回值
   if (!root) return []

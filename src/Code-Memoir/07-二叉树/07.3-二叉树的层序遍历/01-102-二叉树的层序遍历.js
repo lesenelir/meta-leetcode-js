@@ -11,7 +11,7 @@
  * @return {number[][]}
  */
 var levelOrder = function(root) {
-  if (root === []) return []
+  if (root === null) return []
 
   let queue = []
   let res = []
@@ -32,6 +32,7 @@ var levelOrder = function(root) {
         queue.push(node.right)
       }
     }
+    // 跳出for循环，则意味着当前层已经遍历完
     res.push(curLevel)
   }
   return res

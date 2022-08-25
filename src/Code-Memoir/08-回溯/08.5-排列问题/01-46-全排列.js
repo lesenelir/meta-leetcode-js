@@ -20,7 +20,7 @@ var permute = function(nums) {
 
     // 单层递归逻辑
     for (let i = 0; i < nums.length; i++) {
-      if (used[i] === true) continue
+      if (used[i] === true) continue // 排除不合法的选择
       path.push(nums[i])
       used[i] = true
       backTracking()

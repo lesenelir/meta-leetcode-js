@@ -15,6 +15,8 @@ var maxDepth = function(root) {
   return getDepth(root)
 
   // 查找每一个节点的深度函数
+  // 将二叉树分解子树来结局问题
+  // 该函数定义：传入一个二叉树根节点，返回这个二叉树的最大深度
   function getDepth(node) {
     // 递归终止条件
     if (!node) return 0
@@ -23,6 +25,29 @@ var maxDepth = function(root) {
     let leftDepth = getDepth(node.left)
     let rightDepth = getDepth(node.right)
     return Math.max(leftDepth, rightDepth) + 1
+  }
+};
+
+// 遍历方式来解决问题
+var maxDepth2 = function(root) {
+  // 二叉树的最大深度，有两种思想：一种是遍历整棵树的方式来解决；另一种是分解子问题
+  let depth = 0, // depth用来记录当前节点的深度
+      maxDepth = 0
+
+  traversal(root)
+  return maxDepth
+
+  function traversal(node) {
+    if (!node) return 0
+
+    // 单层递归逻辑
+    depth++ // 前序遍历位置
+    if (!node.left && !node.right) {
+      maxDepth = Math.max(depth, maxDepth)
+    }
+    traversal(node.left)
+    traversal(node.right)
+    depth-- // 后序遍历位置
   }
 
 };

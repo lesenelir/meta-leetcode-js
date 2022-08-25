@@ -11,6 +11,34 @@
  * @return {string[]}
  */
 var binaryTreePaths = function(root) {
+  // 返回从根节点到叶子节点之间的路径：回溯
+  // 遍历
+  let res = [],
+      path = []
+  traversal(root)
+  return res
+
+  function traversal(node) {
+    // 递归终止条件
+    if (!node) return
+    if (!node.left && !node.right) {
+      path.push(node.val)
+      res.push(path.join('->'))
+      path.pop()
+      // return // 可有可无
+    }
+
+    // 单层递归逻辑
+    path.push(node.val)  // 前序位置
+    traversal(node.left)
+    traversal(node.right)
+    path.pop()     // 后序位置
+  }
+
+};
+
+
+var binaryTreePaths2 = function(root) {
   let res = []
   getPath(root, '')
   return res

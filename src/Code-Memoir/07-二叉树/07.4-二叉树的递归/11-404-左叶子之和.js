@@ -11,6 +11,27 @@
  * @return {number}
  */
 var sumOfLeftLeaves = function(root) {
+  // 遍历整颗树的方法来解决左叶子之和
+  // 也可以用层序遍历
+  let res = 0
+  traversal(root)
+  return res
+
+  function traversal(node) {
+    if (!node) return
+
+    // 前序位置
+    if (node.left && !node.left.left && !node.left.right) {
+      res += node.left.val
+    }
+    traversal(node.left)
+    traversal(node.right)
+  }
+
+};
+
+
+var sumOfLeftLeaves2 = function(root) {
   // 思想：
   // 左叶子定义：某节点的左节点不为空，且该节点的左节点的左右孩子都为空，则该节点的左节点为左叶子节点
   let res = 0

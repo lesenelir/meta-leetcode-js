@@ -33,20 +33,23 @@ var invertTree = function(root) {
 
 // Note: 翻转二叉树用层次遍历来处理
 
+// 递归方法有两个解题思路
+var invertTree = function(root) {
+  // 求解二叉树递归问题：1. 能否通过二叉树遍历来完成 2. 能否通过分解子问题来推导原问题来解决
+  // 本题通过遍历的方式来解决，遍历到每一个节点，翻转两个节点的值
+  traversal(root)
+  return root
 
-// 使用递归方法
-var invertTree2 = function(root) {
+  function traversal(node) {
+    if (!node) return
 
-  return DFS(root)
-
-  // 自定向下递归
-  function DFS(root) {
-    if (root === null) return root // 递归终止条件
-    ;[root.left, root.right] = [root.right, root.left]
-    DFS(root.left)
-    DFS(root.right)
-    return root
+    // 单层递归逻辑
+    // 在前序位置：对于该元素节点交换该元素节点的左右孩子
+    ;[node.left, node.right] = [node.right, node.left]
+    traversal(node.left)
+    traversal(node.right)
   }
 
 };
 
+// Note: 遍历函数用traversal；需要通过分解子问题的，可以用

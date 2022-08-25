@@ -12,6 +12,31 @@
  * @return {boolean}
  */
 var hasPathSum = function(root, targetSum) {
+  // 二叉树遍历做法
+  let sum = 0,
+      flag = false
+
+  traversal(root)
+  return flag
+
+  function traversal(node) {
+    if (!node) return
+
+    // 单层递归逻辑 - 遍历
+    sum += node.val // 前序位置 进入节点
+    if (!node.left && !node.right && sum === targetSum) {
+      flag = true
+      return
+    }
+    traversal(node.left)
+    traversal(node.right)
+    sum -= node.val // 后序位置 离开节点
+  }
+
+};
+
+
+var hasPathSum2 = function(root, targetSum) {
   // 递归函数要有返回值
   if (!root) return false
   return traversal(root, targetSum - root.val)

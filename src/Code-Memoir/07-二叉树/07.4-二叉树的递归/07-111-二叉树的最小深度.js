@@ -36,3 +36,29 @@ var minDepth = function(root) {
   }
 
 };
+
+// 递归遍历节点方式来解决，
+var minDepth2 = function(root) {
+  // 二叉树问题有两种结局方案：1. 遍历二叉树是否能解决 2. 将二叉树分解成一个子树问题来解决，定义函数的意义
+  if (!root) return 0
+  let depth = 0, // 当前递归到的节点深度
+      minDepth = Number.MAX_VALUE
+
+  traversal(root)
+  return minDepth
+
+  function traversal(node) {
+    if (!node) return 0
+
+    // 单层递归逻辑 - 遍历
+    depth++ // 前序位置
+    if (!node.left && !node.right) { // 叶子节点
+      minDepth = Math.min(minDepth, depth)
+    }
+    traversal(node.left)
+    traversal(node.right)
+    // 后序位置
+    depth-- // 后序位置是离开一个节点，所以深度要--
+  }
+
+};
