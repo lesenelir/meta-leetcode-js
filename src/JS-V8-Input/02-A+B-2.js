@@ -32,3 +32,4 @@ while (K--) {
   print(arr[0] + arr[1])
 }
 
+// Note： readline()每一行读到的都是字符串
