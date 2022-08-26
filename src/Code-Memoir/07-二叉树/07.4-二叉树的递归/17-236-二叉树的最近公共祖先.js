@@ -24,6 +24,7 @@ var lowestCommonAncestor = function(root, p, q) {
     let left = traversal(node.left, p, q) // node的左子树
     let right = traversal(node.right, p, q) // node的右子树
     // 后序位置
+    // 后序位置可以返回通过函数返回回来的值
     if (left && right) return node
     if (left && !right) return left
     if (!left && right) return right
