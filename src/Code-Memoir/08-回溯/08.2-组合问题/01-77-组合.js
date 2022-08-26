@@ -3,7 +3,34 @@
  * @param {number} k
  * @return {number[][]}
  */
-var combine = function (n, k) {
+var combine = function(n, k) {
+  // 组合回溯
+  let res = [],
+      path = []
+
+  traversal(1)
+  return res
+
+  function traversal(startIndex) { // startIndex 用来控制树枝的生长
+    if (path.length === k) {
+      res.push([...path])
+      return
+    }
+
+    // 回溯递归
+    for (let i = startIndex; i <= n; i++) {
+      // 进入节点的前序位置
+      path.push(i)
+      traversal(i + 1)
+      // 离开节点的后序位置
+      path.pop()
+    }
+  }
+
+};
+
+
+var combine2 = function (n, k) {
   // 组合问题是处理叶子节点 所有递归终止条件必须写
   let res = []
   let path = []

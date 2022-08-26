@@ -4,6 +4,37 @@
  * @return {number[][]}
  */
 var combinationSum3 = function(k, n) {
+  let res = [],
+      path = []
+
+  traversal(1)
+  return res
+
+  function traversal(startIndex) {
+    if (path.length === k) {
+      let sum = 0
+      for (let i = 0; i < path.length; i++) {
+        sum += path[i]
+      }
+      if (sum === n) {
+        res.push([...path])
+        return
+      }
+    }
+
+    for (let i = startIndex; i <= 9; i++) {
+      path.push(i)
+      traversal(i + 1)
+      path.pop()
+    }
+  }
+
+};
+
+
+
+
+var combinationSum32 = function(k, n) {
   // 组合问题是无序的 - 1 ~ 9 选k个使得和为n
   let res = [],
       path = []

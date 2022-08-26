@@ -4,6 +4,35 @@
  * @return {number[][]}
  */
 var combinationSum = function(candidates, target) {
+  // 回溯
+  let res = [],
+      path = [],
+      sum = 0
+
+  candidates.sort((a, b) => a - b)
+  traversal(0)
+  return res
+
+  function traversal(startIndex) {
+    if (sum > target) return  // 递归终止条件
+    if (sum === target) {
+      res.push([...path])
+      return
+    }
+
+    for (let i = startIndex; i < candidates.length; i++) {
+      sum += candidates[i]
+      path.push(candidates[i])
+      traversal(i)
+      sum -= candidates[i]
+      path.pop()
+    }
+  }
+
+};
+
+
+var combinationSum2 = function(candidates, target) {
   let path = [],
       res = []
 
