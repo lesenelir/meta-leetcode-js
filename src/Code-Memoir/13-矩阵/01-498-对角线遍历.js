@@ -3,6 +3,32 @@
  * @return {number[]}
  */
 var findDiagonalOrder = function(mat) {
+  // 用数据结构map来保存数据，对于同一组数据，key是下标之和是相同的
+  let res = [],
+      map = new Map(),
+      m = mat.length,
+      n = mat[0].length
+
+  for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
+      let key = i + j
+      if (!map.has(key)) map.set(key, [])
+      map.get(key).push(mat[i][j])
+    }
+  }
+
+  for (let [key, value] of map.entries()) {
+    if (key % 2 === 1) {
+      res.push(...value)
+    } else {
+      res.push(...value.reverse())
+    }
+  }
+
+  return res
+};
+
+var findDiagonalOrder1 = function(mat) {
   let res = []
 
   // 对于第一行遍历列
