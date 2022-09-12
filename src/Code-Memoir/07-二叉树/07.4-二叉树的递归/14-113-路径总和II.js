@@ -42,10 +42,35 @@ var pathSum = function(root, targetSum) {
 
 };
 
-
-
-
 var pathSum2 = function(root, targetSum) {
+  // 收集路径
+  let path = [],
+      res = [],
+      sum = 0
+
+  traversal(root)
+  return res
+
+  function traversal(node) {
+    if (!node) return
+
+    sum += node.val
+    path.push(node.val)
+    if (!node.left && !node.right && sum === targetSum) {
+      res.push([...path])
+    }
+    traversal(node.left)
+    traversal(node.right)
+    sum -= node.val
+    path.pop()
+  }
+
+};
+
+
+
+
+var pathSum3 = function(root, targetSum) {
   // 思路：遍历递归每一条路径targetSum - 每个节点的val 为 0，则放入数组中
   // 要遍历整棵树所有的路径，所以递归函数不需要有返回值
   if (!root) return []

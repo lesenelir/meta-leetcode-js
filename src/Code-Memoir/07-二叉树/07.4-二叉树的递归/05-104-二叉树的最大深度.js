@@ -38,11 +38,11 @@ var maxDepth2 = function(root) {
   return maxDepth
 
   function traversal(node) {
-    if (!node) return 0
+    if (!node) return
 
     // 单层递归逻辑
     depth++ // 前序遍历位置
-    if (!node.left && !node.right) {
+    if (!node.left && !node.right) { // 最大深度只能在叶子节点取得
       maxDepth = Math.max(depth, maxDepth)
     }
     traversal(node.left)

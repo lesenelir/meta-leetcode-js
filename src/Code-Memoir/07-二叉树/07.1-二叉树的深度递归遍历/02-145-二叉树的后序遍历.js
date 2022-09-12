@@ -25,3 +25,4 @@ var postorderTraversal = function(root) {
 };
 
 // Note: 参数、终止条件、单层递归逻辑
+// 递归形式的遍历，都可以有前序位置和后序位置，分别在递归之前和递归之后

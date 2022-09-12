@@ -35,15 +35,15 @@ var isSameTree = function(p, q) {
 // 递归写法 简单写法
 var isSameTree2 = function(p, q) {
   // 终止条件
- if (!q && !p) { // 都为空不存在时，则true
-   return true
- }
- if (!q || !p) { // 有一个为空不存在时，则false
-   return false
- }
- if (q.val !== p.val) { // p q 都存在，但是数值不存在时则false
-   return false
- }
- return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
+  if (!q && !p) { // 都为空不存在时，则true
+    return true
+  }
+  if (!q || !p) { // 有一个为空不存在时，则false
+    return false
+  }
+   if (q.val !== p.val) { // p q 都存在，但是数值不存在时则false
+     return false
+   }
+   return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
 };
 

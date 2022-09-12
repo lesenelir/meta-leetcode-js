@@ -36,7 +36,7 @@ var countNodes2 = function(root) {
   return num
 
   function traversal(node) {
-    if (!node) return 0
+    if (!node) return
 
     // 单层递归逻辑 - 遍历
     num++ // 前序位置：进入节点，则num++

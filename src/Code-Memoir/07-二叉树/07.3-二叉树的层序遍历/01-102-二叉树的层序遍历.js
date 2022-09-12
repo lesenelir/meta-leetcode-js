@@ -15,7 +15,7 @@ var levelOrder = function(root) {
 
   let queue = []
   let res = []
-  if (root !== null) queue.push(root)
+  if (root) queue.push(root)
 
   while (queue.length !== 0) {
     // 记录当前层级保存的节点数
