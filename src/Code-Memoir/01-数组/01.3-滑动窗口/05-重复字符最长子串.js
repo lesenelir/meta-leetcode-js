@@ -34,5 +34,3 @@ function getLongestSequence( input ) {
 module.exports = {
   getLongestSequence : getLongestSequence
 };
-
-
