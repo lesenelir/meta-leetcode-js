@@ -3,15 +3,14 @@
  * @return {boolean}
  */
 var canJump = function(nums) {
-  // 思路：每次遇到下标就走完所有路径
-  // 维护[0, cover]长度的区间，cover的值会随着数组的长度改变而变化
-  let cover = 0,
-      len = nums.length
+  // 能跳到第3个格子，则尝试1～3之间所有格子的最大距离
+  let len = nums.length,
+    res = 0
 
-  for (let i = 0; i <= cover; i++) {
-    cover = Math.max(cover, nums[i] + i)
-    if (cover >= len - 1) return true
+  for (let i = 0; i < len; i++) {
+    if (i > res) return false // 当前的下标大于能跳到的最大距离，则返回为false
+    res = Math.max(res, nums[i] + i)
   }
 
-  return false
+  return true
 };
