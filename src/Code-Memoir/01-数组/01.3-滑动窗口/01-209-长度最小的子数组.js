@@ -75,7 +75,7 @@ var minSubArrayLen4 = function(target, nums) {
 
   while (right < nums.length) {
     sum += nums[right]
-    // 满足条件，则缩小窗口
+    // 不满足要求，则缩小窗口
     while (sum >= target) {
       if (minLen > right - left + 1) {
         minLen = right - left + 1
