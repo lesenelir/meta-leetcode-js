@@ -7,6 +7,7 @@ var generateMatrix = function(n) {
       res = new Array(n).fill().map(() => new Array(n).fill()),
       num = 1
 
+  // Note: 注意此处的循环不变量的区间是[left, right]
   while (true) {
     // 从左到右
     for (let i = left; i <= right; i++) {
@@ -36,3 +37,5 @@ var generateMatrix = function(n) {
 
   return res
 };
+
+// Note: 螺旋矩阵题目需要取到区间之间

@@ -21,16 +21,13 @@ var isBalanced = function(root) {
   // 单层递归逻辑： 对于一个节点深度而言，找左节点的深度 和 右节点的深度，取最大的值 + 1 作为该节点的最大深度
   function maxDepth(node) {
     if (!node) return 0
-    if (!flag) return
 
-    // 单层递归逻辑
     let leftDepth = maxDepth(node.left)
     let rightDepth = maxDepth(node.right)
     // 后序时间位置，出节点时，判断当前节点的左右深度
     if (Math.abs(leftDepth - rightDepth) > 1) {
       flag = false
     }
-
     return 1 + Math.max(leftDepth, rightDepth)
   }
 }
