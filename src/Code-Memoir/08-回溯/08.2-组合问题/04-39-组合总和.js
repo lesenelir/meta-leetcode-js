@@ -4,7 +4,7 @@
  * @return {number[][]}
  */
 var combinationSum = function(candidates, target) {
-  // 回溯
+  // 组合 元素可重复
   let res = [],
       path = [],
       sum = 0
@@ -14,15 +14,18 @@ var combinationSum = function(candidates, target) {
   return res
 
   function traversal(startIndex) {
+    // 如果sum > target 则结束本地递归函数的执行，返回上一层函数的执行
     if (sum > target) return  // 递归终止条件
     if (sum === target) {
       res.push([...path])
       return
     }
 
+    // 对于当前集合进行递归遍历
     for (let i = startIndex; i < candidates.length; i++) {
       sum += candidates[i]
       path.push(candidates[i])
+      // 可重复选择，此处的递归下标还是当前的元素
       traversal(i)
       sum -= candidates[i]
       path.pop()

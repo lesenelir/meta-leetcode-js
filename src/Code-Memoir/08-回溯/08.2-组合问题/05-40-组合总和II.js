@@ -4,38 +4,37 @@
  * @return {number[][]}
  */
 var combinationSum2 = function(candidates, target) {
-  // 解决重复问题
-  let path = [],
-      used = new Array(candidates.length).fill(false),
-      res = []
+  // 不可重复且去重；标记数组
+  let res = [],
+    path = [],
+    sum = 0,
+    len = candidates.length,
+    used = new Array(len).fill(false)
 
+  // 去重操作都要对数组进行排序
   candidates.sort((a, b) => a - b)
-  backTracking(0, 0)
+  backTracking(0)
   return res
 
-  function backTracking(startIndex, sum) {
-    // 递归终止条件
-    if (sum > target) {
-      return
-    }
+  function backTracking(startIndex) {
+    if (sum > target) return
     if (sum === target) {
       res.push([...path])
       return
     }
 
-    // 单层递归逻辑
-    for (let i = startIndex; i < candidates.length; i++) {
-      // used[i - 1] == true，说明同一树枝candidates[i - 1]使用过
-      // used[i - 1] == false，说明同一树层candidates[i - 1]使用过
-      // 要对同一树层使用过的元素进行跳过
+    for (let i = startIndex; i < len; i++) {
+      // 同一层两个相同的元素不可以重复选取
       if (i > 0 && candidates[i] === candidates[i - 1] && used[i - 1] === false) {
-        continue;
+        continue
       }
       path.push(candidates[i])
+      sum += candidates[i]
       used[i] = true
-      backTracking(i + 1, sum + candidates[i])
-      used[i] = false
+      backTracking(i + 1)
       path.pop()
+      sum -= candidates[i]
+      used[i] = false
     }
   }
 
