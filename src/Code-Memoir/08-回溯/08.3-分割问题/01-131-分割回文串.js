@@ -3,40 +3,31 @@
  * @return {string[][]}
  */
 var partition = function(s) {
-  // 切割问题 类似于 组合问题
+  // 分割问题是另一种组合问题
   let res = [],
-      path = []
+    path = [],
+    len = s.length
 
   backTracking(0)
   return res
 
-  function backTracking(startIndex) { // 一个元素不能重复利用要startIndex
-    // 递归终止条件
-    if (startIndex >= s.length) {
+  function backTracking(startIndex) {
+    if (startIndex >= len) {
       res.push([...path])
       return
     }
 
-    // 单层递归逻辑
-    for (let i = startIndex; i < s.length; i++) {
-      if (isPalindrome(s, startIndex, i)) {
-        let str = s.substr(startIndex, i - startIndex + 1)
-        path.push(str)
-      } else {
-        continue
-      }
-      backTracking(i+1) // 递归下一层
-      path.pop() // 回溯
+    for (let i = startIndex; i < len; i++) {
+      if (!isPalindrome(s, startIndex, i)) continue
+      path.push(s.slice(startIndex, i + 1))
+      backTracking(i + 1)
+      path.pop()
     }
-
   }
 
-  function isPalindrome(str, start, end) {
-    let [left, right] = [start, end]
+  function isPalindrome(str, left, right) {
     while (left < right) {
-      if (str[left] !== str[right]) {
-        return false
-      }
+      if (str[left] !== str[right]) return false
       left++
       right--
     }

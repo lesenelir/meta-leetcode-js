@@ -39,3 +39,40 @@ var combinationSum2 = function(candidates, target) {
   }
 
 };
+
+
+var combinationSum22 = function(candidates, target) {
+  // 不可重复且去重；标记数组
+  let res = [],
+    path = [],
+    sum = 0,
+    len = candidates.length
+
+  // 去重操作都要对数组进行排序
+  candidates.sort((a, b) => a - b)
+  backTracking(0)
+  return res
+
+  function backTracking(startIndex) {
+    if (sum > target) return
+    if (sum === target) {
+      res.push([...path])
+      return
+    }
+
+    for (let i = startIndex; i < len; i++) {
+      // 同一层两个相同的元素不可以重复选取
+      // 同一树枝相同的元素不需要重复选取
+      if (i > startIndex && candidates[i] === candidates[i - 1]) {
+        continue
+      }
+      path.push(candidates[i])
+      sum += candidates[i]
+      backTracking(i + 1)
+      path.pop()
+      sum -= candidates[i]
+    }
+  }
+
+};
+

@@ -33,3 +33,33 @@ var subsetsWithDup = function(nums) {
   }
 
 };
+
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+var subsetsWithDup2 = function(nums) {
+  // 子集问题需要在每个节点都收集元素
+  let res = [],
+    path = [],
+    len = nums.length
+
+  nums.sort((a, b) => a - b)
+  backTracking(0)
+  return res
+
+  function backTracking(startIndex) {
+    res.push([...path])
+
+    for (let i = startIndex; i < len; i++) {
+      // 同一层次的相同元素的节点不递归
+      if (i > startIndex && nums[i] === nums[i-1]) continue
+      path.push(nums[i])
+      backTracking(i + 1)
+      path.pop()
+    }
+  }
+
+};
+
