@@ -21,14 +21,14 @@ var permuteUnique = function(nums) {
 
     // 单层递归逻辑
     for (let i = 0; i < nums.length; i++) {
-      if (!used[i-1] && nums[i] === nums[i-1]) continue
-      if (!used[i]) {
-        path.push(nums[i])
-        used[i] = true
-        backTracking()
-        used[i] = false
-        path.pop()
-      }
+      // 同一个树层没有遍历递归过，且当前的元素和前一个元素值相等 （需要对原数组进行排序）
+      if (i > 0 && nums[i] === nums[i-1] && used[i] === false) continue
+      if (used[i] === true) continue
+      path.push(nums[i])
+      used[i] = true
+      backTracking()
+      used[i] = false
+      path.pop()
     }
   }
 
