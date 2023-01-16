@@ -4,7 +4,7 @@
 
   The contents of this repositories including:
 
-> Learning JavaScript Data Stucture & Algorithm Book
+> Learning JavaScript Data Structure & Algorithm Book
 >
 > Coding Interviews Book
 >
