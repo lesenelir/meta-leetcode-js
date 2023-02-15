@@ -19,3 +19,19 @@ var twoSum = function(nums, target) {
 };
 
 // Note: 两数之和 暴力关键在于 查找target-nums[i]复杂度，所以该用map
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum2 = function(nums, target) {
+  let map = new Map(),
+    len = nums.length
+
+  for (let i = 0; i < len; i++) {
+    if (map.has(nums[i])) return [map.get(nums[i]), i]
+    map.set(target - nums[i], i)
+  }
+
+};
