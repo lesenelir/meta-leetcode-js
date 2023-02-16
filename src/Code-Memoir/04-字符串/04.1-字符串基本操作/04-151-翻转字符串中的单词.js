@@ -34,3 +34,18 @@ var reverseWords = function(s) {
 
   return res.trim()
 };
+
+var reverseWords2 = function(s) {
+  let newS = s.trim()
+
+  let arr = newS.split(' '),
+    len = arr.length,
+    res = ''
+
+  for (let i = len - 1; i >= 0; i--) {
+    if (i === 0 && arr[i] !== '') res += arr[i]
+    else if (arr[i] !== '') res += arr[i] + ' '
+  }
+
+  return res
+};

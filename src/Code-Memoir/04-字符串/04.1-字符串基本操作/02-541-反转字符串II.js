@@ -4,6 +4,7 @@
  * @return {string}
  */
 var reverseStr = function (s, k) {
+  // 不能在原字符串上进行修改，修改原来的字符串会对当前的修改造成影响
   let arr = s.split('')
 
   for (let i = 0; i < s.length; i += 2 * k) {
