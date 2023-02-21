@@ -103,3 +103,33 @@ var pathSum3 = function(root, targetSum) {
   }
 
 };
+
+
+var pathSum4 = function(root, targetSum) {
+  // 遍历思想
+  let res = [],
+    path = [],
+    sum = 0
+
+  traversal(root)
+  return res
+
+  function traversal(node) {
+    if (!node) return
+
+    path.push(node.val)
+    sum += node.val
+    // 进入节点的操作
+    if (!node.left && !node.right && sum === targetSum) {
+      res.push([...path])
+      sum -= node.val
+      path.pop()
+      return
+    }
+    traversal(node.left)
+    traversal(node.right)
+    path.pop()
+    sum -= node.val
+  }
+
+};

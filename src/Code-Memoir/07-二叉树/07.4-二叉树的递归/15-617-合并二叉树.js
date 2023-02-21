@@ -35,3 +35,18 @@ var mergeTrees = function(root1, root2) {
   }
 
 };
+
+var mergeTrees2 = function(root1, root2) {
+  // 合并
+  return merge(root1, root2)
+
+  function merge(node1, node2) {
+    if (!node1) return node2
+    if (!node2) return node1
+
+    let root = new TreeNode(node1.val + node2.val)
+    root.left = merge(node1.left, node2.left)
+    root.right = merge(node1.right, node2.right)
+    return root
+  }
+};
