@@ -18,3 +18,22 @@ var thousandSeparator = function(n) {
 
   return res.join('')
 };
+
+
+var thousandSeparator2 = function(n) {
+  let arr = String(n).split(''),
+    len = arr.length,
+    res = [],
+    count = 0
+
+  for (let i = len - 1; i >= 0; i--) {
+    res.unshift(arr[i])
+    count++
+    if (count === 3 && i !== 0) {
+      res.unshift('.')
+      count = 0
+    }
+  }
+
+  return res.join('')
+}
