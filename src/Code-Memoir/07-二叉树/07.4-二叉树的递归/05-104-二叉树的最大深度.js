@@ -22,6 +22,7 @@ var maxDepth = function(root) {
     if (!node) return 0
 
     // 单层递归逻辑： 对于一个节点深度而言，找左节点的深度 和 右节点的深度，取最大的值 + 1 作为该节点的最大深度
+    // 此处先计算出根节点左子树的深度 ；再计算出右子树的深度， ===> 最后根据左子树的深度和右子树的深度计算出总共的根节点的深度
     let leftDepth = getDepth(node.left)
     let rightDepth = getDepth(node.right)
     return Math.max(leftDepth, rightDepth) + 1
