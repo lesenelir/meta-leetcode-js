@@ -4,7 +4,7 @@
  */
 var findPeakElement = function(nums) {
   let left = 0,
-    right = nums.length
+    right = nums.length - 1
 
   while (left < right) {
     let mid = Math.floor((left + right) / 2)
