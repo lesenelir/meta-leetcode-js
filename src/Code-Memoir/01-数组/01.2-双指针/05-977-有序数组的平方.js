@@ -4,7 +4,7 @@
  */
 // 左右双指针：最大值的位置一定是左右两边
 var sortedSquares = function(nums) {
-  // 左右指针： 数组平方的最大位一定在
+  // 左右指针： 数组平方的最大位一定在两侧
   let left = 0,
       right = nums.length - 1,
       res = []
