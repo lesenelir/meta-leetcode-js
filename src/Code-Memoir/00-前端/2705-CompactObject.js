@@ -25,4 +25,4 @@ var compactObject = function(obj) {
   }
 
   return res
-};
+}
