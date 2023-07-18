@@ -43,7 +43,7 @@ var maxDepth2 = function(root) {
 
     // 单层递归逻辑
     depth++ // 前序遍历位置
-    if (!node.left && !node.right) { // 最大深度只能在叶子节点取得
+    if (!node.left && !node.right) { // 最大深度只能在叶子节点取得 (这个 if 判断写不写都一样，可能会更高效，但实质是一样的)
       maxDepth = Math.max(depth, maxDepth)
     }
     traversal(node.left)
