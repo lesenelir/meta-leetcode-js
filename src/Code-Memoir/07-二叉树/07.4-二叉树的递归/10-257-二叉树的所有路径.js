@@ -23,7 +23,7 @@ var binaryTreePaths = function(root) {
     if (!node) return
 
     path.push(node.val)
-    if (!node.left && !node.right) {
+    if (!node.left && !node.right) { // 这个 if 语句不可以放到前面，因为要收集到节点后，才能进行判断
       let str = path.join('->')
       res.push(str)
     }

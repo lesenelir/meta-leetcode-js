@@ -13,6 +13,7 @@
 var isBalanced = function(root) {
   // 遍历二叉树，计算该节点的所有最大的高度
   // 将该二叉树问题转换为子问题
+  // 类似于问题222
   let flag = true
   maxDepth(root)
   return flag
