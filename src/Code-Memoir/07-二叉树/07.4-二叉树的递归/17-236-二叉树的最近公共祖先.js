@@ -40,9 +40,7 @@ var lowestCommonAncestor2 = function(root, p, q) {
 
   function traversal(node, p, q) {
     // 递归终止条件
-    if (!node || node === p || node === q) {
-      return node
-    }
+    if (!node || node === p || node === q) return node
 
     // 单层递归逻辑
     let left = traversal(node.left, p, q)
