@@ -61,3 +61,33 @@ var combinationSum2 = function(candidates, target) {
     }
   }
 };
+
+
+var combinationSum3 = function(candidates, target) {
+  // 组合元素可重复选，无限重复选择
+  let res = [],
+    path = [],
+    sum = 0
+
+  candidates.sort((a, b) => a - b) // 排序是关键
+  traversal(0)
+  return res
+
+  function traversal(startIndex) {
+    if (sum > target) return
+    if (sum === target) {
+      res.push([...path])
+      return
+    }
+
+    for (let i = startIndex; i < candidates.length; i++) {
+      path.push(candidates[i])
+      sum += candidates[i]
+      traversal(i) // 因为可以重复选择，所以每次递归还是从当前元素开始选
+      sum -= candidates[i]
+      path.pop()
+    }
+
+  }
+
+};

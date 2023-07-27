@@ -62,3 +62,35 @@ var combinationSum32 = function(k, n) {
   }
 
 };
+
+
+
+var combinationSum33 = function(k, n) {
+  // 组合是 (2,1) 和 (1,2) 不能一起取得，是属于相同的结果
+  // (1,2) 和 (2,1) 是不同的排列
+  // 每个数字只能取到一个，往后取
+  let res = [],
+    path = [],
+    sum = 0
+
+  traversal(1)
+  return res
+
+  function traversal(startIndex) {
+    if (sum > n) return  // 剪枝操作
+
+    if (path.length === k && sum === n) {
+      res.push([...path])
+      return
+    }
+
+    for (let i = startIndex; i <= 9; i++) {
+      path.push(i)
+      sum += i
+      traversal(i + 1)
+      sum -= i
+      path.pop()
+    }
+  }
+
+};
