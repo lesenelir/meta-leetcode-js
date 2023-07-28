@@ -32,3 +32,31 @@ var permute = function(nums) {
 };
 
 // Note: 同一层节点重复利用，可以不需要startIndex参数
+
+var permute2 = function(nums) {
+  // 全排列
+  let res = [],
+    path = [],
+    len = nums.length,
+    used = new Array(len).fill(false)
+
+  traversal()
+  return res
+
+  function traversal() {
+    if (path.length === len) {
+      res.push([...path])
+      return
+    }
+
+    for (let i = 0; i < len; i++) {
+      if (used[i] === true) continue
+      path.push(nums[i])
+      used[i] = true
+      traversal()
+      used[i] = false
+      path.pop()
+    }
+  }
+
+};

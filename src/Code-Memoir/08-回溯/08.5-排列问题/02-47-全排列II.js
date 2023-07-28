@@ -34,3 +34,40 @@ var permuteUnique = function(nums) {
   }
 
 };
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+var permuteUnique2 = function(nums) {
+  // 去重复，同一层节点不进行计算
+  // 相同元素，单层树层节点是要舍去
+  // 把重复的元素进行去重
+  let res = [],
+    path = [],
+    len = nums.length,
+    used = new Array(len).fill(false)
+
+  nums.sort((a, b) => a - b)
+
+  traversal()
+  return res
+
+  function traversal() {
+    if (path.length === len) {
+      res.push([...path])
+      return
+    }
+
+    for (let i = 0; i < len; i++) {
+      if (i > 0 && nums[i] === nums[i - 1] && used[i-1] === false) continue // 一定要 used[i-1] === false
+      if (used[i] === true) continue
+      path.push(nums[i])
+      used[i] = true
+      traversal()
+      used[i] = false
+      path.pop()
+    }
+  }
+
+};
