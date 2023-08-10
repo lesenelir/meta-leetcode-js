@@ -19,3 +19,16 @@ var debounce = function(fn, t) {
  * log('Hello'); // cancelled
  * log('Hello'); // Logged at t=100ms
  */
+
+
+var debounce2 = function(fn, t) {
+  // 防抖
+  let timer = null
+
+  return function(...agrs) {
+    if (timer) clearTimeout(timer)
+    timer = setTimeout(() => {
+      fn.apply(this, agrs)
+    }, t)
+  }
+};
