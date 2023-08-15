@@ -3,16 +3,14 @@
  * @return {Object}
  */
 var compactObject = function(obj) {
+  // 类似于深拷贝
   let res
-  if (Array.isArray(obj)) {
-    res = []
-  } else {
-    res = {}
-  }
+  Array.isArray(obj) ? res = [] : res = {}
 
-  if (Array.isArray(obj)) { // obj <=> []
-    for (let item of obj) {
-      if (typeof item === 'object' && item !== null) res.push(compactObject(item))
+  // obj <=> []
+  if (Array.isArray(obj)) {
+    for (let item of obj) { // obj is an array
+      if (typeof item === 'object' && item) res.push(compactObject(item))
       else if (item) res.push(item)
     }
     return res
@@ -20,9 +18,9 @@ var compactObject = function(obj) {
 
   // obj <=> {}
   for (let key in obj) {
-    if (typeof obj[key] === 'object' && obj[key] !== null) res[key] = compactObject(obj[key])
+    if (typeof obj[key] === 'object' && obj[key]) res[key] = compactObject(obj[key])
     else if (obj[key]) res[key] = obj[key]
   }
 
   return res
-}
+};
