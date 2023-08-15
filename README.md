@@ -1,8 +1,10 @@
  # Meta-LeetcodeJS
 
+ > You can find me in Leetcode at https://leetcode.cn/u/lesenelir/
+
   ### JavaScript solutions for Personal Leetcode problems
 
-  The contents of this repositories including:
+  The contents of this repository including:
 
 > Learning JavaScript Data Structure & Algorithm Book
 >
