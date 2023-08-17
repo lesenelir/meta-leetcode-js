@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 var isEmpty = function(obj) {
-  let flag = false
+  let flag
 
   if (Array.isArray(obj)) {
     flag = obj.length === 0
