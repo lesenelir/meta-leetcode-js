@@ -56,6 +56,3 @@ var reverseList2 = function(head) {
   }
 
 };
-
-
-
