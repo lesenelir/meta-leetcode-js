@@ -14,6 +14,14 @@
 var lowestCommonAncestor = function(root, p, q) {
   // 二叉树的递归问题可以分解为：1. 二叉树的遍历解决  2. 将二叉树分解为子问题（子树）
   // 找最近公共祖先，需要从底向上遍历，只能通过“后序遍历”
+
+  // root 为 p 和 q 最近的公共祖先，则 root.left 和 root.right 都不是 p q 的最近公共祖先
+
+  // 只有以下的情况：
+  // 1. p 和 q 在 root 的 左右两侧， root 为最近公共祖先
+  // 2. p === root, q 在 root 的左右两侧
+  // 3. q === root, p 在 root 的左右两侧
+
   return traversal(root, p, q)
 
   // 函数定义：输入node，p，q 返回这个node节点为二叉树的p，q最近的公共祖先节点（返回一个节点）

@@ -34,3 +34,27 @@ function getLongestSequence( input ) {
 module.exports = {
   getLongestSequence : getLongestSequence
 };
+
+var lengthOfLongestSubstring = function(s) {
+  // 最长滑动窗口
+  // 子串必须是连续的，子序列可以是不连续的
+  let maxLen = 0,
+    left = 0,
+    right = 0,
+    len = s.length,
+    map = new Map()
+
+  while (right < len) {
+
+    while (map.has(s[right])) { // 连续删除
+      map.delete(s[left])
+      left++
+    }
+
+    map.set(s[right], s[right])
+    maxLen = Math.max(maxLen, right - left + 1)
+    right++
+  }
+
+  return maxLen
+};
