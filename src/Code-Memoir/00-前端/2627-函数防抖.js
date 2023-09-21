@@ -25,10 +25,10 @@ var debounce2 = function(fn, t) {
   // 防抖
   let timer = null
 
-  return function(...agrs) {
+  return function(...args) {
     if (timer) clearTimeout(timer)
     timer = setTimeout(() => {
-      fn.apply(this, agrs)
+      fn.apply(this, args)
     }, t)
   }
 };
