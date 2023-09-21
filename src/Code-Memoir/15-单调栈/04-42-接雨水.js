@@ -56,3 +56,39 @@ var trap2 = function(height) {
   }
   return res
 };
+
+// 以下是暴力方法：
+
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
+var trap3 = function(height) {
+  let res = 0,
+    len = height.length
+
+  // 暴力，对于当前的元素，找左右两侧超过自己的最大值，取这两个值的相对小的 - 自己的值就是能存储的水
+  for (let i =  1; i < len - 1; i++) {
+    let currentHeight = height[i],
+      leftHeight = 0,
+      rightHeight = 0
+
+    // 找左边的超过自己的最大值
+    for (let l = 0; l < i; l++) {
+      if (height[l] > currentHeight) leftHeight = Math.max(leftHeight, height[l])
+    }
+
+    // 找右边超过自己的最大值
+    for (let r = i + 1; r < len; r++) {
+      if (height[r] > currentHeight) rightHeight = Math.max(rightHeight, height[r])
+    }
+
+    if (leftHeight && rightHeight) {
+      res += Math.min(leftHeight, rightHeight) - currentHeight
+    }
+  }
+
+  return res
+};
+
+
