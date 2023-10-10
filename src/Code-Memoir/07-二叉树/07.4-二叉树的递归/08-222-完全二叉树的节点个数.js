@@ -23,6 +23,7 @@ var countNodes = function(root) {
     // 单层遍历逻辑 - 计算该节点左子树节点个数 和 右子树节点个数 + 1（自身）
     let leftNum = getNodes(node.left)
     let rightNum = getNodes(node.right)
+    // 出结点的时候 将当前左右子数结点数目 + 自身结点数返回上一层结点
     return leftNum + rightNum + 1
   }
 };

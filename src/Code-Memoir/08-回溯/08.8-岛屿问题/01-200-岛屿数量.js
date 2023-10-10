@@ -19,6 +19,7 @@ var numIslands = function(grid) {
 
   return res
 
+  // 做深度搜索，包括此结点的岛屿边界，该结点的上下左右
   function traversal(i, j) {
     // 递归终止条件
     if (i < 0 || j < 0 || i >= m || j >= n) {

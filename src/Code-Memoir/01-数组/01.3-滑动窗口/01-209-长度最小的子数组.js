@@ -94,3 +94,27 @@ var minSubArrayLen4 = function(target, nums) {
 // Note: 区别于前缀和：前缀和是之前的所有元素；滑动窗口是之前的一个序列的元素
 //       对于暴力算法处理序列，可以有两个数组，外层数组为左边界，内存循环为右边界
 //       滑动窗口的精髓：根据子序列和的大小情况，不断调节子序列的起始位置
+
+var minSubArrayLen5 = function(target, nums) {
+  // 滑动窗口
+  let len = nums.length,
+    left = 0,
+    right = 0,
+    sum = 0,
+    minLen = Number.MAX_VALUE
+
+  while (right < len) {
+    sum += nums[right]
+
+    while (sum >= target) {
+      minLen = Math.min(minLen, right - left + 1)
+      sum -= nums[left]
+      left++
+    }
+
+    right++
+  }
+
+  return minLen === Number.MAX_VALUE ? 0 : minLen
+};
+
